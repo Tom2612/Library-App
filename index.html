@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Your personal library</h1>
+    <form action="#">
+        <input type="text" placeholder="Book name" id="title">
+        <input type="text" placeholder="Author" id="author">
+        <input type="number" placeholder="Number of pages" id="pages">
+        <label for="read">Have you finished it?</label>
+        <input type="checkbox" id="read" name="read" value="read">
+        <button id="confirm">Add book</button>
+    </form>
+    <section class="books">
+        <div class="container">
+            <div class="idNum">1</div>
+            <div class="bookTitle">Magician</div>
+            <div class="bookAuthor">Raymond Feist</div>
+            <div class="bookPages">493 pages</div>
+            <button id="bookStatus" class="buttonRead">Read</button>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>

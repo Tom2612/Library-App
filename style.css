@@ -1,0 +1,53 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.container{
+    width: 250px;
+    height: 300px;
+    background-color: lightcoral;
+    border: 3px solid aqua;
+    border-radius: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.idNum{
+    font-size: 1.5rem;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+.bookTitle{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.bookAuthor{
+    font-size: 1.5rem;
+}
+.buttonRead{
+    font-size: 1rem;
+    background-color: lightgreen;
+    border: 2px solid green;
+    border-radius: 2px;
+}
+.buttonUnread{
+    font-size: 1rem;
+    background-color: lightpink;
+    border: 2px solid red;
+    border-radius: 2px;
+}
+.books{
+    display: flex;
+    flex-wrap: wrap;
+
+}
