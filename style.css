@@ -6,8 +6,13 @@ html{
     padding: 0;
 }
 body{
-    font-family: sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 .container{
     width: 250px;
@@ -19,7 +24,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    overflow: hidden;
 }
 .idNum{
     font-size: 1.5rem;
@@ -27,12 +33,16 @@ body{
     justify-self: flex-start;
 }
 .bookTitle{
+    font-family: 'Anton';
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
 }
 .bookAuthor{
     font-size: 1.5rem;
+}
+.bookPages{
+    margin: 3px;
 }
 .buttonRead{
     font-size: 1rem;
@@ -49,5 +59,72 @@ body{
 .books{
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
+}
+.topBanner{
+    width: 100%;
+    padding: 5px 14px;
+    display: flex;
+    justify-content: space-between;
+}
+.deleteBtn{
+    opacity: 0.5;
+}
+.deleteBtn:hover{
+    cursor: pointer;
+}
+#form{
+    
+    right: 50%;
+    left: 25%;
+    position: absolute;
+    background-color: green;
+    z-index: 1;
+    border-radius: 30px;
+    border: 5px solid blue;
+    box-shadow: 0px 0px 45px -15px rgb(99, 97, 97);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 3rem;
+}
+#form input{
+    width: 75%;
+    font-size: 2rem;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+#form label{
+    font-size: 1.5rem;
+}
+#form button{
+    width: 75%;
+    font-size: 2rem;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+#read{
+    height: 24px;
+    margin-bottom: 20px;
+}
+#addBookBtn{
+    width: 25%;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+.hidden{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+.visible{
+    visibility: visible;
+    height: 60%;
+    width: 50%;
 }
