@@ -4,9 +4,20 @@ const pages = document.querySelector('#pages');
 const read = document.querySelector('#read');
 const readButton = document.querySelector('#bookStatus');
 const libraryHolder = document.querySelector('.books');
+
+//controls for the add a book buttton
+const addBookBtn = document.querySelector('#addBookBtn');
+addBookBtn.addEventListener('click', function () {
+    form.classList.remove('hidden');
+    form.classList.add('visible');
+})
+
+//Controlling the form functionality
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    form.classList.remove('visible');
+    form.classList.add('hidden');
     addBook();
     reset();
     render();
@@ -49,13 +60,27 @@ function render() {
 function displayBook(book) {
     const container = document.createElement('div');
     const idNum = document.createElement('div');
+    const idNum2 = document.createElement('div');
+    const deleteBtn = document.createElement('div');
     const title = document.createElement('div');
     const author = document.createElement('div');
     const pages = document.createElement('div');
     const read = document.createElement('button');
 
+    idNum.classList.add('topBanner');
+    deleteBtn.innerHTML = '<a href="#">' + 'X' + '</a>';
+
+    // deleteBtn.classList.add('deleteBtn');
+    // deleteBtn.addEventListener('click', function () {
+    //     myLibrary.splice(this.book, 1);
+    // })
+
+    idNum.append(idNum2);
+    idNum.append(deleteBtn);
+
     container.classList.add('container');
-    idNum.classList.add('idNum');
+    idNum2.classList.add('idNum');
+    idNum2.textContent = '#3';
 
     title.classList.add('bookTitle');
     title.textContent = book.title;
@@ -64,7 +89,7 @@ function displayBook(book) {
     author.textContent = book.author;
 
     pages.classList.add('bookPages');
-    pages.textContent = book.pages
+    pages.textContent = `Pages: ${book.pages}`;
 
     if (book.read) {
         read.classList.add('buttonRead');
