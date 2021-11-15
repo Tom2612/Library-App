@@ -7,17 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Library</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ubuntu:wght@300;400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <h1>Your personal library</h1>
-    <form action="#">
+    <button id="addBookBtn">Add a new book!</button>
+    <form action="#" id="form" class="hidden">
         <input type="text" placeholder="Book name" id="title">
         <input type="text" placeholder="Author" id="author">
         <input type="number" placeholder="Number of pages" id="pages">
         <label for="read">Have you finished it?</label>
         <input type="checkbox" id="read" name="read" value="read">
-        <button id="confirm">Add book</button>
+        <button id="confirm">+ book</button>
     </form>
     <section class="books">
         <div class="container">
