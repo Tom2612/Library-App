@@ -9,6 +9,11 @@ body{
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     text-align: center;
+    background-color: #e3e9e5;
+    color: #e3e9e5;
+}
+h1{
+    color: #057389;
 }
 a{
     text-decoration: none;
@@ -17,15 +22,17 @@ a{
 .container{
     width: 250px;
     height: 300px;
-    background-color: lightcoral;
-    border: 3px solid aqua;
+    background-color: #057389;
+    border: 3px solid #d29681;
     border-radius: 5px;
     margin: 5px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     overflow: hidden;
+    letter-spacing: 0.2rem;
 }
 .idNum{
     font-size: 1.5rem;
@@ -48,13 +55,13 @@ a{
     font-size: 1rem;
     background-color: lightgreen;
     border: 2px solid green;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 .buttonUnread{
     font-size: 1rem;
     background-color: lightpink;
     border: 2px solid red;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 .books{
     display: flex;
@@ -68,20 +75,22 @@ a{
     justify-content: space-between;
 }
 .deleteBtn{
-    opacity: 0.5;
+    background-color: inherit;
+    border:none;
+    border-radius: 5px;
+    font-weight: 700;
 }
 .deleteBtn:hover{
     cursor: pointer;
 }
 #form{
-    
     right: 50%;
     left: 25%;
     position: absolute;
-    background-color: green;
+    background-color: #e3e9e5;
     z-index: 1;
     border-radius: 30px;
-    border: 5px solid blue;
+    border: 5px solid #d29681;
     box-shadow: 0px 0px 45px -15px rgb(99, 97, 97);
     display: flex;
     flex-direction: column;
@@ -106,17 +115,22 @@ a{
     font-size: 2rem;
     font-family: inherit;
     border-radius: 5px;
+    background-color: #f7c73f;
     border: 2px solid black;
+}
+#form button:first-of-type{
+    margin-bottom: 10px;
 }
 #read{
     height: 24px;
     margin-bottom: 20px;
 }
 #addBookBtn{
-    width: 25%;
+    width: 280px;
     font-size: 1.5rem;
     border: 2px solid black;
     border-radius: 50px;
+    background: #f7c73f;
 }
 .hidden{
     visibility: hidden;
@@ -125,6 +139,6 @@ a{
 }
 .visible{
     visibility: visible;
-    height: 60%;
-    width: 50%;
+    height: 475px;
+    width: 567px;
 }
