@@ -11,6 +11,11 @@ addBookBtn.addEventListener('click', function () {
     form.classList.remove('hidden');
     form.classList.add('visible');
 })
+const closeFormBtn = document.querySelector('#close');
+closeFormBtn.addEventListener('click', function () {
+    form.classList.remove('visible');
+    form.classList.add('hidden');
+})
 
 //Controlling the form functionality
 const form = document.querySelector('form');
@@ -61,26 +66,27 @@ function displayBook(book) {
     const container = document.createElement('div');
     const idNum = document.createElement('div');
     const idNum2 = document.createElement('div');
-    const deleteBtn = document.createElement('div');
+    const deleteBtn = document.createElement('button');
     const title = document.createElement('div');
     const author = document.createElement('div');
     const pages = document.createElement('div');
     const read = document.createElement('button');
 
     idNum.classList.add('topBanner');
-    deleteBtn.innerHTML = '<a href="#">' + 'X' + '</a>';
 
-    // deleteBtn.classList.add('deleteBtn');
-    // deleteBtn.addEventListener('click', function () {
-    //     myLibrary.splice(this.book, 1);
-    // })
+    deleteBtn.textContent = 'X';
+    deleteBtn.classList.add('deleteBtn');
+    deleteBtn.addEventListener('click', () => {
+        myLibrary.splice(myLibrary.indexOf(book), 1)
+        render();
+    })
 
     idNum.append(idNum2);
     idNum.append(deleteBtn);
 
     container.classList.add('container');
     idNum2.classList.add('idNum');
-    idNum2.textContent = '#3';
+    idNum2.textContent = `#${(myLibrary.indexOf(book) + 1)}`;
 
     title.classList.add('bookTitle');
     title.textContent = book.title;
