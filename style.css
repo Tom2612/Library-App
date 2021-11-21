@@ -84,8 +84,9 @@ a{
     cursor: pointer;
 }
 #form{
-    right: 50%;
-    left: 25%;
+    /* right: 50%; */
+    left: 50%;
+    transform: translate(-50%, 0);
     position: absolute;
     background-color: #e3e9e5;
     z-index: 1;
@@ -98,6 +99,7 @@ a{
     justify-content: center;
     text-align: center;
     line-height: 3rem;
+    transition: all 0.2s;
 }
 #form input{
     width: 75%;
@@ -109,6 +111,7 @@ a{
 }
 #form label{
     font-size: 1.5rem;
+    color:black;
 }
 #form button{
     width: 75%;
@@ -136,9 +139,11 @@ a{
     visibility: hidden;
     height: 0;
     width: 0;
+    transform: scale(0);
 }
 .visible{
     visibility: visible;
     height: 475px;
     width: 567px;
+    transform: scale(1);
 }
